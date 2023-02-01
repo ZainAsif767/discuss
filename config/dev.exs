@@ -1,9 +1,8 @@
-import Config
-
+use Mix.Config
 # Configure your database
 config :discuss, Discuss.Repo,
-  username: "zain",
-  password: "",
+  username: "postgres",
+  password: "postgres",
   hostname: "localhost",
   database: "discuss_dev",
   stacktrace: true,
