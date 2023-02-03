@@ -17,6 +17,16 @@ defmodule DiscussWeb do
   and import those modules here.
   """
 
+  def schema do
+    quote do
+      use Ecto.Schema
+
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+    end
+  end
+
   def controller do
     quote do
       use Phoenix.Controller, namespace: DiscussWeb
