@@ -1,4 +1,5 @@
 defmodule DiscussWeb.Router do
+  alias DiscussWeb.TopicController
   alias DiscussWeb.PageController
   use DiscussWeb, :router
 
@@ -20,6 +21,7 @@ defmodule DiscussWeb.Router do
 
     get "/", PageController, :index
     get "/topics/new", TopicController, :new
+    get "/topics", TopicController, :create
   end
 
   # Other scopes may use custom stacks.
