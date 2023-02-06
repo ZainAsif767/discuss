@@ -1,5 +1,5 @@
 defmodule Discuss.Topic do
-  use DiscussWeb, :schema
+  use Discuss.Web, :schema
 
   schema "topics" do
     field :title, :string
