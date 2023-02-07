@@ -1,8 +1,8 @@
-/* This file is for your main application CSS */
+/* This file is for your main application CSS
 @import "./phoenix.css";
 
 /* Alerts and form errors used by phx.new */
-.alert {
+/* .alert {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -33,10 +33,10 @@
   color: #a94442;
   display: block;
   margin: -1rem 0 2rem;
-}
+} */
 
 /* LiveView specific classes for your customization */
-.phx-no-feedback.invalid-feedback,
+/* .phx-no-feedback.invalid-feedback,
 .phx-no-feedback .invalid-feedback {
   display: none;
 }
@@ -117,4 +117,16 @@
 @keyframes fade-out-keys{
   0% { opacity: 1; }
   100% { opacity: 0; }
+} */
+
+.help-block {
+  color: red;
+  text-transform: capitalize;
+  position: absolute;
+  top: 37px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
 }
