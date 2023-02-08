@@ -22,6 +22,7 @@ defmodule DiscussWeb do
       use Ecto.Schema
 
       import Ecto
+      import Ecto.Repo
       import Ecto.Changeset
       import Ecto.Query
     end
