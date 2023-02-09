@@ -6,13 +6,14 @@
     <%= topic.title %>
     <div class="right">
         <%= link "Edit", to: Routes.topic_path(@conn, :edit, topic) %>
+        <%= link "Delete", to: Routes.topic_path(@conn, :delete, topic), method: :delete %>
     </div>
     </li>
     <% end %>
 </ul>
 
 <div class="fixed-action-btn">
-    <%= link to: Routes.topic_path(@conn, :new), class: "btn-floating btn-large waves-effect waves-light red" do %>
-        <i class="material-icons">add</i>
+    <%= link to: Routes.topic_path(@conn, :new),class: "waves-effect waves-light btn" do %>
+        <i class="material-icons right">add</i>Add New
     <% end %>
 </div>

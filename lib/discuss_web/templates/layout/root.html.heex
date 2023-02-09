@@ -8,16 +8,17 @@
     <%= live_title_tag assigns[:page_title] || "Discuss", suffix: " · Phoenix Framework" %>
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapi.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
 
   </head>
   <body>
   <nav class="light-blue">
     <div class="nav-wrapper container">
-      <a href="/" class="brand-logo">
+      <a href="#" class="brand-logo center">
         Discussions
       </a>
+
     </div>
   </nav>
 
