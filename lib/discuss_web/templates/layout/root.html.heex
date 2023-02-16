@@ -18,10 +18,11 @@
       <a href="#" class="brand-logo center">
         Discussions
       </a>
+
       <ul class="right">
         <%= if @conn.assigns[:user] do %>
           <li>
-            LogOut
+            <%= link "Sing Out", to: Routes.auth_path(@conn, :signout) %>
           </li>
         <% else %>
           <li>
@@ -31,6 +32,7 @@
       </ul>
     </div>
   </nav>
+  <h6 id="line" class="center">Arguments are pointless while discussions are healthy.</h6>
 
     <%= @inner_content %>
 
