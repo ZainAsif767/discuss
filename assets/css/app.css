@@ -13,3 +13,8 @@
    position: relative;
    margin-bottom: 25px;
  }
+
+ #line {
+   text-decoration: underline;
+   font-style: italic;
+ }
