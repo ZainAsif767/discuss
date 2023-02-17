@@ -30,6 +30,7 @@ defmodule DiscussWeb.Router do
   scope "/auth", DiscussWeb do
     pipe_through :browser
 
+    get "/signout", AuthController, :signout
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback
   end
