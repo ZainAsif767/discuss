@@ -1,14 +1,18 @@
 <h4>Topics</h4>
+
 <ul class="collection">
 
     <%= for topic <- @topics do %>
-    <li class="collection-item">
-    <%= topic.title %>
-    <div class="right">
-        <%= link "Edit", to: Routes.topic_path(@conn, :edit, topic) %>
-        <%= link "Delete", to: Routes.topic_path(@conn, :delete, topic), method: :delete %>
-    </div>
-    </li>
+        <li class="collection-item">
+        <%= topic.title %>
+
+        <%= if @conn.assigns.user && @conn.assigns.user.id == topic.user_id do %>
+         <div class="right">
+            <%= link "Edit", to: Routes.topic_path(@conn, :edit, topic) %>
+            <%= link "Delete", to: Routes.topic_path(@conn, :delete, topic), method: :delete %>
+         </div>
+        <% end %>
+        </li>
     <% end %>
 </ul>
 
