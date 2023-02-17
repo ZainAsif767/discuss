@@ -3,6 +3,8 @@ defmodule DiscussWeb.TopicController do
 
   alias Discuss.{Topic, Repo}
 
+  plug Discuss.Plugs.RequireAuth when action in [:create, :new, :edit, :update, :delete]
+
   def delete(conn, %{"id" => topic_id}) do
     Repo.get!(Topic, topic_id) |> Repo.delete!()
 
