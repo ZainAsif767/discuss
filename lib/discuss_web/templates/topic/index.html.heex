@@ -4,7 +4,7 @@
 
     <%= for topic <- @topics do %>
         <li class="collection-item">
-        <%= topic.title %>
+        <%= link topic.title, to: Routes.topic_path(@conn, :show, topic) %>
 
         <%= if @conn.assigns.user && @conn.assigns.user.id == topic.user_id do %>
          <div class="right">
