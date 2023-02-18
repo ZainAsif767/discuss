@@ -4,7 +4,7 @@ defmodule DiscussWeb.AuthController do
 
   alias Discuss.{User, Repo}
 
-  def callback(%{assigns: %{ueberauth: auth}} = conn, _params) do
+  def callback(%{assigns: %{ueberauth_auth: auth}} = conn, _params) do
     user_params = %{token: auth.credentials.token, email: auth.info.email, provider: "github"}
     changeset = User.changeset(%User{}, user_params)
 
@@ -27,7 +27,7 @@ defmodule DiscussWeb.AuthController do
 
       {:error, _reason} ->
         conn
-        |> put_flash(:error, "Error Signing in")
+        |> put_flash(:error, "Error signing in")
         |> redirect(to: Routes.topic_path(conn, :index))
     end
   end
