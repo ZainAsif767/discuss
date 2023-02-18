@@ -10,7 +10,11 @@ defmodule DiscussWeb.Endpoint do
     signing_salt: "nrs2pKmg"
   ]
 
-  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+  # socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+  # i have changed the above line with line below !! <ZAIN>
+  socket "/socket", DiscussWeb.UserSocket,
+    websocket: true,
+    longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
   #
