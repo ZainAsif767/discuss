@@ -1,5 +1,6 @@
 defmodule DiscussWeb.Router do
   use DiscussWeb, :router
+  # import Plug.Conn
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -14,6 +15,12 @@ defmodule DiscussWeb.Router do
   pipeline :api do
     plug :accepts, ["json"]
   end
+
+  # pipeline :websocket do
+  #   plug :accepts, ["html", "json"]
+  #   plug Phoenix.Endpoint.CSRFPlug
+  #   plug Phoenix.Socket
+  # end
 
   scope "/", DiscussWeb do
     pipe_through :browser

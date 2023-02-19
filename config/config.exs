@@ -12,10 +12,35 @@ config :discuss,
 
 # Configures the endpoint
 config :discuss, DiscussWeb.Endpoint,
+  # http: [port: 4000],
+  # port: 4000
   url: [host: "localhost"],
+  # cache_static_manifest: "priv/static/cache_manifest.json",
+  # server: true,
+  secret_key_base: "Rg2/8TWOvIPeMTQT3JL27ByhNIidyBGCNkB3MlDTB4dnvrGfFdOmm4nllEIyjVXI",
   render_errors: [view: DiscussWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Discuss.PubSub,
   live_view: [signing_salt: "bIM7vwcv"]
+
+# watchers: [
+#   node: [
+#     "node_modules/webpack/bin/webpack.js",
+#     "--mode",
+#     "development",
+#     "--watch-stdin",
+#     cd: Path.expand("../assets", __DIR__)
+#   ]
+# ],
+# cowboy: [
+#   port: 4001,
+#   dispatch: [
+#     {:_,
+#      [
+#        {"/websocket", Phoenix.Endpoint.CowboyWebSocket, {Discuss.Endpoint, []}},
+#        {:_, Plug.Adapters.Cowboy.Handler, {Discuss.Endpoint, []}}
+#      ]}
+#   ]
+# ]
 
 # Configures the mailer
 #

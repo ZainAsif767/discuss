@@ -10,7 +10,7 @@ defmodule DiscussWeb.Endpoint do
     signing_salt: "nrs2pKmg"
   ]
 
-  # socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
   # i have changed the above line with line below !! <ZAIN>
   socket "/socket", DiscussWeb.UserSocket,
     websocket: true,
@@ -51,4 +51,9 @@ defmodule DiscussWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug DiscussWeb.Router
+
+  # socket "/socket", Phoenix.Endpoint.CowboyWebSocket,
+  #   timeout: 45,
+  #   transport_options: [websocket: [compress: :text]],
+  #   serializer: Phoenix.Socket.V2.JSONSerializer
 end
