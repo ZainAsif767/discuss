@@ -9,6 +9,11 @@
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+      <%= if @conn.assigns.user do %>
+        window.userToken = "<%= Phoenix.Token.sign(Discuss.Endpoint, "key", @conn.assigns.user.id) %>"
+      <% end %>
+    </script>
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
 
   </head>
