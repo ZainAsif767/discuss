@@ -1,6 +1,8 @@
 defmodule Discuss.User do
   use DiscussWeb, :schema
 
+  @derive {Poison.Encoder, only: [:email]}
+
   schema "users" do
     field :email, :string
     field :provider, :string

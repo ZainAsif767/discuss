@@ -1,6 +1,7 @@
 defmodule Discuss.Comment do
   use DiscussWeb, :schema
 
+  @derive {Poison.Encoder, only: [:contents, :user]}
   schema "comments" do
     field :content, :string
     belongs_to :user, Discuss.User
