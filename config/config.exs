@@ -10,7 +10,7 @@ config :discuss, DiscussWeb.Endpoint,
   url: [host: "localhost"],
   # cache_static_manifest: "priv/static/cache_manifest.json",
   # server: true,
-  secret_key_base: "Rg2/8TWOvIPeMTQT3JL27ByhNIidyBGCNkB3MlDTB4dnvrGfFdOmm4nllEIyjVXI",
+  secret_key_base: "flhE3KgXL84xJ9jApxJqNR9CGub1l/x9rELcg+yO22NXO5xd4/CNovP6lYFJzDY1",
   render_errors: [view: DiscussWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Discuss.PubSub,
   live_view: [signing_salt: "bIM7vwcv"]
