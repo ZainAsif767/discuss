@@ -1,4 +1,6 @@
-# Discuss
+# Discussions 
+A web application that acts as a forum for discussions on different topics, You can create , edit ,and delete Topics created. The Applications also provides Authentication using Github using uberAuth.
+
 
 To start your Phoenix server:
 
