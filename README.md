@@ -1,6 +1,11 @@
 # Discussions 
 Discuss is a web application built on top of Phoenix Framework for creating, editing, and deleting topics with GitHub authentication via uberAuth. The PostgreSQL database is used to store topics, users, and comments.
 
+## Project Demo
+
+
+
+
 ## Getting Started: 
 Clone the repository: 
 ```
