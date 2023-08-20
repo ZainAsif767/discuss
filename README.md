@@ -1,5 +1,5 @@
 # Discussions 
-Discuss is a web application built on top Phoenix Framework for creating, editing, and deleting topics with Github authentication via uberAuth. The PostgreSQL database is used to store topics, users, and comments.
+Discuss is a web application built on top of Phoenix Framework for creating, editing, and deleting topics with GitHub authentication via uberAuth. The PostgreSQL database is used to store topics, users, and comments.
 
 ## Getting Started: 
 Clone the repository: 
@@ -17,21 +17,21 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Features
-* Create, Delete, Edit topics
+* Create, Delete, and Edit topics
 * User Authentication and Authorization (Github)
 * Comments on Topic
 * PostgreSQL for DB
 * Interactive UI using MaterializeCSS
 
 ## Note 
-This website uses Web-sockets which is now deprecated in Phoenix 1.7, now LiveViews are used. Some functions or 
-comments might not work properly.
+This website uses Web-sockets which are now deprecated in Phoenix 1.7, now LiveViews are used. Some functions or 
+comments might not work correctly.
 
 ## Contributions
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## Learn more about Phoenix Framework
-.
+
   * Official website: https://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html
   * Docs: https://hexdocs.pm/phoenix
