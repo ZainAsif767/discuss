@@ -3,6 +3,7 @@ Discuss is a web application built on top of Phoenix Framework for creating, edi
 
 ## Project Demo
 
+[Demo Video Discussions.webm](https://github.com/ZainAsif767/discuss/assets/98703238/d379cdfe-80c3-4d11-8c0a-a0e9ea1c438d)
 
 
 
